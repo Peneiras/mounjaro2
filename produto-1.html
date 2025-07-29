@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mounjaro® 2.5mg - Comprar</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><a href="index.html"><i class="fas fa-pills"></i> Mounjaro</a></h1>
+                    <p>Produtos Farmacêuticos Premium</p>
+                </div>
+                <nav class="nav">
+                    <a href="index.html#produtos">Produtos</a>
+                    <a href="index.html#sobre">Sobre</a>
+                    <a href="index.html#contato">Contato</a>
+                    <div class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="product-page">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Início</a>
+                <span><i class="fas fa-chevron-right"></i></span>
+                <a href="index.html#produtos">Produtos</a>
+                <span><i class="fas fa-chevron-right"></i></span>
+                <span>Mounjaro® 2.5mg</span>
+            </div>
+
+            <div class="product-detail">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img src="assets/images/mounjaro-box.jpg" alt="Mounjaro 2.5mg" id="mainImage">
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="assets/images/mounjaro-box.jpg" alt="Mounjaro 2.5mg" class="thumbnail active" onclick="changeImage(this)">
+                        <img src="assets/images/mounjaro-product.png" alt="Mounjaro Caneta" class="thumbnail" onclick="changeImage(this)">
+                    </div>
+                </div>
+
+                <div class="product-info-detail">
+                    <div class="product-badge available">Disponível</div>
+                    <h1>Mounjaro® 2.5mg</h1>
+                    <p class="product-subtitle">Dose inicial para tratamento de diabetes tipo 2</p>
+                    
+                    <div class="rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-text">(4.9/5 - 127 avaliações)</span>
+                    </div>
+
+                    <div class="price-section">
+                        <div class="main-price">
+                            <span class="current-price">R$ 1.299,90</span>
+                            <span class="original-price">R$ 1.499,90</span>
+                            <span class="discount">13% OFF</span>
+                        </div>
+                        <div class="installments">
+                            <p>ou <strong>12x de R$ 108,33</strong> sem juros</p>
+                            <p class="pix-price"><i class="fas fa-qrcode"></i> R$ 1.169,91 no PIX (10% desconto)</p>
+                        </div>
+                    </div>
+
+                    <div class="product-specifications">
+                        <h3>Especificações do Produto</h3>
+                        <ul>
+                            <li><strong>Princípio Ativo:</strong> Tirzepatida</li>
+                            <li><strong>Concentração:</strong> 2.5mg/0.5mL</li>
+                            <li><strong>Apresentação:</strong> 4 canetas pré-preenchidas</li>
+                            <li><strong>Fabricante:</strong> Eli Lilly</li>
+                            <li><strong>Registro ANVISA:</strong> 1.0235.0240</li>
+                            <li><strong>Validade:</strong> 24 meses</li>
+                        </ul>
+                    </div>
+
+                    <div class="quantity-section">
+                        <label for="quantity">Quantidade:</label>
+                        <div class="quantity-controls">
+                            <button type="button" onclick="decreaseQuantity()">-</button>
+                            <input type="number" id="quantity" value="1" min="1" max="5">
+                            <button type="button" onclick="increaseQuantity()">+</button>
+                        </div>
+                        <span class="stock-info">5 unidades em estoque</span>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="add-to-cart-btn" onclick="addToCart()">
+                            <i class="fas fa-shopping-cart"></i>
+                            Adicionar ao Carrinho
+                        </button>
+                        <button class="buy-now-btn" onclick="buyNow()">
+                            <i class="fas fa-bolt"></i>
+                            Comprar Agora
+                        </button>
+                        <button class="wishlist-btn" onclick="toggleWishlist()">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+
+                    <div class="shipping-info">
+                        <h4><i class="fas fa-truck"></i> Informações de Entrega</h4>
+                        <div class="shipping-calculator">
+                            <input type="text" placeholder="Digite seu CEP" id="cep">
+                            <button onclick="calculateShipping()">Calcular</button>
+                        </div>
+                        <div class="shipping-options" id="shippingOptions" style="display: none;">
+                            <div class="shipping-option">
+                                <span class="shipping-type">Entrega Expressa</span>
+                                <span class="shipping-time">1-2 dias úteis</span>
+                                <span class="shipping-price">R$ 29,90</span>
+                            </div>
+                            <div class="shipping-option">
+                                <span class="shipping-type">Entrega Normal</span>
+                                <span class="shipping-time">3-5 dias úteis</span>
+                                <span class="shipping-price">R$ 19,90</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="security-badges">
+                        <div class="badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Compra Segura</span>
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-medal"></i>
+                            <span>Produto Original</span>
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-thermometer-half"></i>
+                            <span>Refrigeração Garantida</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-button active" onclick="showTab('description')">Descrição</button>
+                    <button class="tab-button" onclick="showTab('usage')">Como Usar</button>
+                    <button class="tab-button" onclick="showTab('contraindications')">Contraindicações</button>
+                    <button class="tab-button" onclick="showTab('reviews')">Avaliações</button>
+                </div>
+
+                <div class="tab-content">
+                    <div id="description" class="tab-pane active">
+                        <h3>Descrição do Produto</h3>
+                        <p>Mounjaro® (tirzepatida) é um medicamento injetável inovador desenvolvido pela Eli Lilly para o tratamento de diabetes tipo 2 em adultos. A tirzepatida é um agonista duplo dos receptores GLP-1 e GIP, oferecendo um mecanismo de ação único que proporciona controle glicêmico superior.</p>
+                        
+                        <h4>Benefícios:</h4>
+                        <ul>
+                            <li>Controle eficaz da glicemia</li>
+                            <li>Redução significativa da HbA1c</li>
+                            <li>Perda de peso como benefício adicional</li>
+                            <li>Administração semanal conveniente</li>
+                            <li>Baixo risco de hipoglicemia</li>
+                        </ul>
+
+                        <h4>Indicações:</h4>
+                        <p>Mounjaro® 2.5mg é indicado como dose inicial para adultos com diabetes mellitus tipo 2, inadequadamente controlada, como adjuvante da dieta e do exercício físico.</p>
+                    </div>
+
+                    <div id="usage" class="tab-pane">
+                        <h3>Como Usar</h3>
+                        <p><strong>Dose Inicial:</strong> 2.5mg uma vez por semana por via subcutânea.</p>
+                        <p><strong>Escalação de Dose:</strong> Após 4 semanas, a dose deve ser aumentada para 5mg uma vez por semana.</p>
+                        
+                        <h4>Instruções de Aplicação:</h4>
+                        <ol>
+                            <li>Retire a caneta da geladeira 15 minutos antes da aplicação</li>
+                            <li>Verifique se o medicamento está límpido e incolor</li>
+                            <li>Escolha o local de aplicação (coxa, abdômen ou braço)</li>
+                            <li>Limpe o local com álcool</li>
+                            <li>Remova a tampa da agulha</li>
+                            <li>Aplique a injeção conforme orientação médica</li>
+                            <li>Descarte a caneta adequadamente após o uso</li>
+                        </ol>
+
+                        <p><strong>Importante:</strong> Sempre siga as orientações do seu médico e farmacêutico.</p>
+                    </div>
+
+                    <div id="contraindications" class="tab-pane">
+                        <h3>Contraindicações e Precauções</h3>
+                        
+                        <h4>Contraindicações:</h4>
+                        <ul>
+                            <li>Hipersensibilidade à tirzepatida ou a qualquer componente da fórmula</li>
+                            <li>Diabetes tipo 1</li>
+                            <li>Cetoacidose diabética</li>
+                            <li>Gravidez e amamentação</li>
+                        </ul>
+
+                        <h4>Precauções:</h4>
+                        <ul>
+                            <li>Histórico de pancreatite</li>
+                            <li>Doença renal grave</li>
+                            <li>Gastroparesia diabética</li>
+                            <li>Uso concomitante com insulina</li>
+                        </ul>
+
+                        <h4>Efeitos Adversos Mais Comuns:</h4>
+                        <ul>
+                            <li>Náusea</li>
+                            <li>Vômito</li>
+                            <li>Diarreia</li>
+                            <li>Diminuição do apetite</li>
+                            <li>Constipação</li>
+                        </ul>
+
+                        <p><strong>Consulte sempre seu médico antes de iniciar o tratamento.</strong></p>
+                    </div>
+
+                    <div id="reviews" class="tab-pane">
+                        <h3>Avaliações dos Clientes</h3>
+                        
+                        <div class="review-summary">
+                            <div class="rating-overview">
+                                <span class="rating-number">4.9</span>
+                                <div class="stars-large">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="total-reviews">127 avaliações</span>
+                            </div>
+                        </div>
+
+                        <div class="reviews-list">
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <span class="reviewer-name">Maria S.</span>
+                                    <div class="review-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="review-date">15/01/2025</span>
+                                </div>
+                                <p class="review-text">"Excelente produto! Minha glicemia está muito mais controlada desde que comecei a usar. Entrega rápida e produto original."</p>
+                            </div>
+
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <span class="reviewer-name">João P.</span>
+                                    <div class="review-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="review-date">10/01/2025</span>
+                                </div>
+                                <p class="review-text">"Produto chegou bem refrigerado e dentro do prazo. Já estou na segunda caixa e os resultados são ótimos."</p>
+                            </div>
+
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <span class="reviewer-name">Ana L.</span>
+                                    <div class="review-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="review-date">05/01/2025</span>
+                                </div>
+                                <p class="review-text">"Bom produto, mas o preço é um pouco alto. Mesmo assim, vale a pena pelos resultados."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Mounjaro</h4>
+                    <p>Produtos farmacêuticos de qualidade para seu bem-estar</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Úteis</h4>
+                    <ul>
+                        <li><a href="index.html#produtos">Produtos</a></li>
+                        <li><a href="index.html#sobre">Sobre Nós</a></li>
+                        <li><a href="index.html#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p><i class="fas fa-phone"></i> (11) 9999-9999</p>
+                    <p><i class="fas fa-envelope"></i> contato@mounjaro.com.br</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mounjaro. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
+
