@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mounjaro - Coleção de Produtos Farmacêuticos</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><i class="fas fa-pills"></i> Mounjaro</h1>
+                    <p>Produtos Farmacêuticos Premium</p>
+                </div>
+                <nav class="nav">
+                    <a href="#produtos">Produtos</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#contato">Contato</a>
+                    <div class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Mounjaro® (Tirzepatida)</h2>
+                    <p>Tratamento inovador para diabetes tipo 2 e controle de peso</p>
+                    <p class="hero-description">
+                        Mounjaro é um medicamento injetável desenvolvido pela Eli Lilly, 
+                        indicado para adultos com diabetes tipo 2 como adjuvante à dieta e exercícios.
+                    </p>
+                    <a href="#produtos" class="cta-button">Ver Produtos</a>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/images/mounjaro-product.png" alt="Mounjaro Produto">
+                </div>
+            </div>
+        </section>
+
+        <section id="produtos" class="products-section">
+            <div class="container">
+                <h2 class="section-title">Nossa Coleção de Produtos</h2>
+                <p class="section-subtitle">Diferentes dosagens e apresentações para atender suas necessidades</p>
+                
+                <div class="products-grid">
+                    <!-- Produto 1 - ATIVO -->
+                    <div class="product-card active" data-product-id="1">
+                        <div class="product-badge available">Disponível</div>
+                        <div class="product-image">
+                            <img src="assets/images/mounjaro-box.jpg" alt="Mounjaro 2.5mg">
+                        </div>
+                        <div class="product-info">
+                            <h3>Mounjaro® 2.5mg</h3>
+                            <p class="product-description">Dose inicial para tratamento de diabetes tipo 2</p>
+                            <div class="product-details">
+                                <span class="dosage">2.5mg/0.5mL</span>
+                                <span class="quantity">4 canetas pré-preenchidas</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">R$ 1.299,90</span>
+                                <span class="installments">ou 12x de R$ 108,33</span>
+                            </div>
+                            <button class="buy-button" onclick="goToProduct(1)">
+                                <i class="fas fa-shopping-cart"></i>
+                                Comprar Agora
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Produto 2 - ATIVO -->
+                    <div class="product-card active" data-product-id="2">
+                        <div class="product-badge available">Disponível</div>
+                        <div class="product-image">
+                            <img src="assets/images/mounjaro-box.jpg" alt="Mounjaro 5mg">
+                        </div>
+                        <div class="product-info">
+                            <h3>Mounjaro® 5mg</h3>
+                            <p class="product-description">Dose de manutenção para controle glicêmico</p>
+                            <div class="product-details">
+                                <span class="dosage">5mg/0.5mL</span>
+                                <span class="quantity">4 canetas pré-preenchidas</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">R$ 1.399,90</span>
+                                <span class="installments">ou 12x de R$ 116,66</span>
+                            </div>
+                            <button class="buy-button" onclick="goToProduct(2)">
+                                <i class="fas fa-shopping-cart"></i>
+                                Comprar Agora
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Produto 3 - ATIVO -->
+                    <div class="product-card active" data-product-id="3">
+                        <div class="product-badge available">Disponível</div>
+                        <div class="product-image">
+                            <img src="assets/images/mounjaro-box.jpg" alt="Mounjaro 7.5mg">
+                        </div>
+                        <div class="product-info">
+                            <h3>Mounjaro® 7.5mg</h3>
+                            <p class="product-description">Dose intermediária para otimização do tratamento</p>
+                            <div class="product-details">
+                                <span class="dosage">7.5mg/0.5mL</span>
+                                <span class="quantity">4 canetas pré-preenchidas</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">R$ 1.499,90</span>
+                                <span class="installments">ou 12x de R$ 124,99</span>
+                            </div>
+                            <button class="buy-button" onclick="goToProduct(3)">
+                                <i class="fas fa-shopping-cart"></i>
+                                Comprar Agora
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Produto 4 - ESGOTADO -->
+                    <div class="product-card out-of-stock">
+                        <div class="product-badge out-of-stock">Esgotado</div>
+                        <div class="product-image">
+                            <img src="assets/images/mounjaro-box.jpg" alt="Mounjaro 10mg">
+                            <div class="out-of-stock-overlay">
+                                <i class="fas fa-times-circle"></i>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Mounjaro® 10mg</h3>
+                            <p class="product-description">Dose alta para controle intensivo</p>
+                            <div class="product-details">
+                                <span class="dosage">10mg/0.5mL</span>
+                                <span class="quantity">4 canetas pré-preenchidas</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">R$ 1.599,90</span>
+                                <span class="installments">ou 12x de R$ 133,33</span>
+                            </div>
+                            <button class="buy-button disabled" disabled>
+                                <i class="fas fa-ban"></i>
+                                Produto Esgotado
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Produto 5 - ESGOTADO -->
+                    <div class="product-card out-of-stock">
+                        <div class="product-badge out-of-stock">Esgotado</div>
+                        <div class="product-image">
+                            <img src="assets/images/mounjaro-box.jpg" alt="Mounjaro 12.5mg">
+                            <div class="out-of-stock-overlay">
+                                <i class="fas fa-times-circle"></i>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Mounjaro® 12.5mg</h3>
+                            <p class="product-description">Dose máxima para casos específicos</p>
+                            <div class="product-details">
+                                <span class="dosage">12.5mg/0.5mL</span>
+                                <span class="quantity">4 canetas pré-preenchidas</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">R$ 1.699,90</span>
+                                <span class="installments">ou 12x de R$ 141,66</span>
+                            </div>
+                            <button class="buy-button disabled" disabled>
+                                <i class="fas fa-ban"></i>
+                                Produto Esgotado
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Produto 6 - ESGOTADO -->
+                    <div class="product-card out-of-stock">
+                        <div class="product-badge out-of-stock">Esgotado</div>
+                        <div class="product-image">
+                            <img src="assets/images/mounjaro-box.jpg" alt="Mounjaro 15mg">
+                            <div class="out-of-stock-overlay">
+                                <i class="fas fa-times-circle"></i>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Mounjaro® 15mg</h3>
+                            <p class="product-description">Dose máxima recomendada</p>
+                            <div class="product-details">
+                                <span class="dosage">15mg/0.5mL</span>
+                                <span class="quantity">4 canetas pré-preenchidas</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">R$ 1.799,90</span>
+                                <span class="installments">ou 12x de R$ 149,99</span>
+                            </div>
+                            <button class="buy-button disabled" disabled>
+                                <i class="fas fa-ban"></i>
+                                Produto Esgotado
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Produto 7 - ESGOTADO -->
+                    <div class="product-card out-of-stock">
+                        <div class="product-badge out-of-stock">Esgotado</div>
+                        <div class="product-image">
+                            <img src="assets/images/mounjaro-box.jpg" alt="Mounjaro Kit Inicial">
+                            <div class="out-of-stock-overlay">
+                                <i class="fas fa-times-circle"></i>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Mounjaro® Kit Inicial</h3>
+                            <p class="product-description">Kit completo para início do tratamento</p>
+                            <div class="product-details">
+                                <span class="dosage">2.5mg + 5mg</span>
+                                <span class="quantity">8 canetas + acessórios</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">R$ 2.399,90</span>
+                                <span class="installments">ou 12x de R$ 199,99</span>
+                            </div>
+                            <button class="buy-button disabled" disabled>
+                                <i class="fas fa-ban"></i>
+                                Produto Esgotado
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Produto 8 - ESGOTADO -->
+                    <div class="product-card out-of-stock">
+                        <div class="product-badge out-of-stock">Esgotado</div>
+                        <div class="product-image">
+                            <img src="assets/images/mounjaro-box.jpg" alt="Mounjaro Pack Família">
+                            <div class="out-of-stock-overlay">
+                                <i class="fas fa-times-circle"></i>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Mounjaro® Pack Família</h3>
+                            <p class="product-description">Pacote econômico para tratamento prolongado</p>
+                            <div class="product-details">
+                                <span class="dosage">Múltiplas doses</span>
+                                <span class="quantity">12 canetas variadas</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price">R$ 3.599,90</span>
+                                <span class="installments">ou 12x de R$ 299,99</span>
+                            </div>
+                            <button class="buy-button disabled" disabled>
+                                <i class="fas fa-ban"></i>
+                                Produto Esgotado
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <div class="container">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Segurança Garantida</h3>
+                        <p>Produtos originais com certificação ANVISA</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-truck"></i>
+                        <h3>Entrega Rápida</h3>
+                        <p>Entrega em todo Brasil com refrigeração adequada</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-user-md"></i>
+                        <h3>Suporte Médico</h3>
+                        <p>Orientação farmacêutica especializada</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-credit-card"></i>
+                        <h3>Pagamento Seguro</h3>
+                        <p>Múltiplas formas de pagamento disponíveis</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Mounjaro</h4>
+                    <p>Produtos farmacêuticos de qualidade para seu bem-estar</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Úteis</h4>
+                    <ul>
+                        <li><a href="#produtos">Produtos</a></li>
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p><i class="fas fa-phone"></i> (11) 9999-9999</p>
+                    <p><i class="fas fa-envelope"></i> contato@mounjaro.com.br</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mounjaro. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
+
